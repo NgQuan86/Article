@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<header>
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+</header>
+                                        @*Nav-bar-left*@
+    <div id="nav-left">
+        <div>
+            <h3>Tendance</h3>
+            <div class="bg-article">
+                <a href="#">Meilleurs articles</a>
+                <a href="#">Nouveauté</a>
+            </div>
+        </div>
+        <div>
+            <h3>Catégorie</h3>
+            <div class="bg-article">
+                <a href="#">Immobilier </a>
+                <a href="#">Vehicule</a>
+                <a href="#">Music</a>
+                <a href="#">Loisir</a>
+                <a href="#">Cuisine</a>
+                <a href="#">Film</a>
+                <a href="#">Vêtements</a>
+            </div>
+        </div>
+    </div>
+
+
+                                                     @*---SECTION---*@
+<section>
+
+                                                    @*Zone vide*@
+    <div id="left">
+    </div>
+
+
+                                                @*Zone des articles*@
+    <div id="mid">
+
+        <article>
+            <h3>Article 1</h3>
+            <div>
+                <div>
+                    <img src="/images/cinema.jpg" alt="Image Description">
+                </div>
+                <div class="bg-art p-10">
+                    <h4>Description</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h3>Article 2</h3>
+            <div>
+                <div>
+                    <img src="/images/batman.jpg" alt="Image Description">
+                </div>
+                <div class="bg-art p-10">
+                    <h4>Description</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h3>Article 3</h3>
+            <div>
+                <div>
+                    <img src="/images/Superman.jpg" alt="Image Description">
+                </div>
+                <div class="bg-art p-10">
+                    <h4>Description</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+
+
+                                                @*Zone d'ajoute*@
+    <div id="right">
+        <a class="color-black" asp-area="" asp-controller="Home" asp-action="Privacy">Ajouter une article</a>
+    </div>
+</section>
+
+
+
+

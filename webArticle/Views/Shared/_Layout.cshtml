@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Your</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/webArticle.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-...votre-intégrité-hachage..." crossorigin="anonymous" asp-append-version="true" />
+</head>
+
+
+<body>
+
+                                                        @* --HEADER-- *@
+    <header>
+        <nav class="nav-couleur navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+           
+            <div class="container-fluid">
+                                                        @*Logo-Home*@
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="/images/logo.png" class="logo">
+                </a>
+                                                        @*Search*@
+                <div>
+                    <input type="search" name="search" id="search" placeholder="Search...">
+                </div>
+                                                        @*Menu Bugger*@
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex ">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="" asp-action="">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Compte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Ajouter une article</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+
+                                                    @* --BODY-- *@
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+                                                    @* --FOOTER-- *@
+    <footer>
+
+        <div class="m-10-auto w-110px">
+                <img src="/images/logo.png" class="logo text-center">
+        </div>  
+            
+        <div class="bg-traite w-150px h-2px margin-auto">
+        </div>
+            
+
+            <div class="d-flex justify-content-center">
+
+                <nav class="m-x-10px">
+                    <ul class="dot-none">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="#">Contact</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="#">A Propos</a></li>
+                    </ul>
+                </nav>
+
+                <div class="social-icons m-x-10px">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+    </footer>
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

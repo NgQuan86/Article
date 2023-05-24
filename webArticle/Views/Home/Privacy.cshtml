@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Ajouter une Article";
+}
+
+<header>
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+</header>
+
+                                        @* ---CARTE--- *@
+<div id="info" class="w-l-50 w-m-70">
+     <form action="/submit-form" method="POST">
+
+                                    @*Titre*@
+        <article>
+            <label for="titre">Titre:</label> 
+            <input class="bordius" type="text" id="name" name="titre" required>
+        </article>
+        <br>
+
+                                  @*Mots-Cles*@
+        <article>
+            <label for="mots-cles">Mots-cles:</label>
+            <input class="bordius" type="text" id="text" name="text" required>
+        </article>
+        <br>
+
+                                   @*Desciption*@
+        <article>
+            <label for="description">Description:</label>
+            <textarea class="bordius" id="description" name="description" rows="4" cols="30" required></textarea>
+         </article>
+        <br>
+
+
+                                    @*Langue-Catégorie*@
+        <div id="lang">
+            <div>
+                <label for="langue">Lanuge:</label>
+                <select class="bordius" id="langue" name="langue">
+                    <option value="Anglais">Anglais</option>
+                    <option value="Français">Français</option>
+                    <option value="Allemand">Allemand</option>
+                    <option value="Italien">Italien</option>
+                    <option value="Espagnol">Espagnol</option>
+                </select>
+            </div>
+            <div>
+                <label for="categorie">Categorie:</label>
+                <select class="bordius" id="categorie" name="categorie">
+                    <option value="Immobilier">Immobilier</option>
+                    <option value="Vehicule">Vehicule</option>
+                    <option value="Music">Music</option>
+                    <option value="Cuisine">Cuisine</option>
+                    <option value="Film">Film</option>
+                    <option value="Vêtements">Vêtements</option>
+                </select>
+            </div>
+        </div>
+        <br><br>
+
+
+                                        @*Photos*@
+        <div>
+            <div>
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="photo"><br><br>
+            </div>
+            <div>
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="photo"><br><br>
+            </div>
+            <div>
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="photo"><br><br>
+            </div>
+        </div>
+        
+                                        @*Buttons*@
+        <div>
+            <input class="bg-info w-100px bordius" type="submit" value="Brouillon">
+            <input class="bg-vert w-100px m-20px bordius" type="submit" value="Publier">
+            <input class="bg-danger w-100px bordius" type="submit" value="Annuler">
+        </div>
+       
+     </form>
+ </div>
+
+
